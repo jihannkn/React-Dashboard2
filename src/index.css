@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.aside-fixed {
+  @apply fixed top-0 left-0 h-full w-64 md:w-64;
+}
+
+.content {
+  @apply ml-64;
+}
+
+@media (max-width: 768px) {
+  .aside-fixed {
+      @apply relative w-full h-auto;
+  }
+
+  .content {
+      @apply ml-0;
+  }
+}
