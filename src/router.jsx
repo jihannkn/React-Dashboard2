@@ -13,6 +13,10 @@ import {
     createRoutesFromElements,
     Navigate
 } from "react-router-dom";
+import Tab1Content from "./pages/dashboard/sub-pages/Tab1Content";
+import Tab2Content from "./pages/dashboard/sub-pages/Tab2Content";
+import Tab3Content from "./pages/dashboard/sub-pages/Tab3Content";
+import Tab4Content from "./pages/dashboard/sub-pages/Tab4Content";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -22,7 +26,12 @@ export const router = createBrowserRouter(
             <Route path="blankpage" element={<DashboardBlankPage />} />
             <Route path="tables" element={<DashboardTables />} />
             <Route path="forms" element={<DashboardForms />} />
-            <Route path="tabbedcontent" element={<DashboardTabbedContent />} />
+            <Route path="tabbedcontent" element={<DashboardTabbedContent />}>
+                    <Route path="tab1" element={<Tab1Content />} />
+                    <Route path="tab2" element={<Tab2Content />} />
+                    <Route path="tab3" element={<Tab3Content />} />
+                    <Route path="tab4" element={<Tab4Content />} />
+            </Route>
             <Route path="calendar" element={<DashboardCalendar />} />
         </Route>
     )
